@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp"
+    },
+    "clang.diagnostic.delay": 200,
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "clang.cxxflags": ["-std=c++11"]
+}
