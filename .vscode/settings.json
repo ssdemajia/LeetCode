@@ -6,7 +6,11 @@
         "ostream": "cpp",
         "streambuf": "cpp",
         "tuple": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp",
+        "string": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",

@@ -7,10 +7,16 @@
 #include <climits>
 #include <map>
 #include <set>
+#include <iomanip>//操控输入输出格式
 #include <unordered_map>
 #include <unordered_set>
+#include <bitset>
 //#include <stack>
 using namespace std;
+using vvs = vector<vector<string>>;//定义一些简易的别名
+using vvi = vector<vector<int>>;
+using vi = vector<int>;
+using vs = vector<string>;
 struct TreeNode {
    int val;
    TreeNode *left;
