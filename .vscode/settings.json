@@ -10,7 +10,9 @@
         "iomanip": "cpp",
         "bitset": "cpp",
         "utility": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iostream": "cpp",
+        "unordered_map": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
