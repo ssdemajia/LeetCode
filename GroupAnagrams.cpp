@@ -2,7 +2,7 @@
 //49. Group Anagrams
 class Solution {
 public:
-    vector<vector<string> > groupAnagrams(vector<string>& strs) {//这个方法超时了
+    vector<vector<string> > groupAnagrams2(vector<string>& strs) {//这个方法超时了
         vector<vector<string> > result;
         //unordered_map<string, vector<string>> m;
         vector<bool> isJoin(strs.size(), false);
@@ -34,6 +34,19 @@ public:
         }
         return true;
     }
+    vector<vector<string> > groupAnagrams(vector<string>& strs){
+        unordered_map<string, vector<string>> m;
+        for (string i : strs) {
+            string s = i;
+            sort(s.begin(), s.end());//如果是一样字符组成的字符串，那么排序后也是一样的
+            m[s].push_back(i);//将i其插入到，排序后字符串作为索引的map中
+        }
+        vector<vector<string>> result;
+        for (auto p: m){
+            result.push_back(p.second);
+        }
+        return result;
+    }
 };
 int main(){
     vector<string> strs = {
@@ -42,6 +55,6 @@ int main(){
     vector<string> strs2 = {"","",""};
     Solution so;
     //if (so.check(strs[0], strs[2])) cout << "Yes!!" << endl;
-    displayVec2d(so.groupAnagrams(strs2));
+    displayVec2d(so.groupAnagrams(strs));
     return 0;
 }
