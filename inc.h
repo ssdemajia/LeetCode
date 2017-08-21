@@ -11,6 +11,8 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <bitset>
+#include <queue>
+#include <deque>
 //#include <stack>
 using namespace std;
 using vvs = vector<vector<string>>;//定义一些简易的别名

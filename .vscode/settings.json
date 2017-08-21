@@ -12,7 +12,10 @@
         "utility": "cpp",
         "string": "cpp",
         "iostream": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "hashtable": "cpp",
+        "functional": "cpp",
+        "unordered_set": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
