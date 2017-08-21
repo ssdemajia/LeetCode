@@ -34,3 +34,5 @@
 
 #specify file
 test.cpp
+.vscode
+a.out.dSYM
