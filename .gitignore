@@ -34,5 +34,5 @@
 
 #specify file
 test.cpp
-.vscode/
-a.out.dSYM/
+/.vscode
+/a.out.dSYM
