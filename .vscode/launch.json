@@ -1,8 +1,9 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
-            "name": "(lldb) Launch",
+            "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/a.out",
@@ -11,7 +12,8 @@
             "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "lldb",
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\mingw\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
