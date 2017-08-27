@@ -74,8 +74,12 @@ string serialize(TreeNode* root) {
              2   3
 
  */
-TreeNode* deserialize(string data) {
+TreeNode* deserialize(string data) {//前序构造遍历来构造树，通过括号来分割
     if (data.size() == 0) return NULL;
+    if (data[data.size()-1] != ')'){//如果data是纯数字，那么直接构造一个节点并且返回
+        TreeNode* root = new TreeNode(stoi(data));
+        return root;
+    }
     int mid;
     for (mid = 0; mid < data.size(); mid++) {
         if (data[mid] == '(')break;//找到第一个括号
@@ -91,5 +95,11 @@ TreeNode* deserialize(string data) {
     root->left = deserialize(data.substr(mid+1, i-mid-1));
     root->right = deserialize(data.substr(i+1, data.size()-i-2));
     return root;
+}
+void inorderDisplay(TreeNode* root) {
+    if (!root) return;
+    inorderDisplay(root->left);
+    cout << root->val<<" ";
+    inorderDisplay(root->right);
 }
 #endif
