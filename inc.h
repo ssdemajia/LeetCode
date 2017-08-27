@@ -54,4 +54,42 @@ void displayMap(std::unordered_map<K,V> m, string sep = " ")
     }
     cout << "\n";
 }
+
+string serialize(TreeNode* root) {
+    if (!root) return "";
+    return to_string(root->val)+"("+serialize(root->left)+","+serialize(root->right)+")";
+}
+
+//通过string来构建一个tree，格式：根(左子树根(左子树的左右子树。。),右子树根(右子树的左右子树。。))
+/* 
+例如 1(2(,),3(,)) 表示        1
+                          /    \
+                         2     3
+ 2(3(4(2,3),),) 表示 2
+                   /    
+                  3 
+                 /
+                4
+              /  \
+             2   3
+
+ */
+TreeNode* deserialize(string data) {
+    if (data.size() == 0) return NULL;
+    int mid;
+    for (mid = 0; mid < data.size(); mid++) {
+        if (data[mid] == '(')break;//找到第一个括号
+    }
+    string rs = data.substr(0, mid);//根节点的值
+    TreeNode* root = new TreeNode(stoi(rs));
+    int i,j = 0;
+    for (i = 1; i < data.size(); i++) {
+        if (data[i] == '(') j++;
+        else if (data[i] == ')') j--;
+        if (j == 1 && data[i] == ',') break;//找到左子树和右子树的中间，是： 根(左子树根(左子树的左右子树。。),右子树根(右子树的左右子树。。))
+    }
+    root->left = deserialize(data.substr(mid+1, i-mid-1));
+    root->right = deserialize(data.substr(i+1, data.size()-i-2));
+    return root;
+}
 #endif

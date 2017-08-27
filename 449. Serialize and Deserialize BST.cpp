@@ -13,18 +13,18 @@ public:
 
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
-        if (!root) return "*";
+        if (!root) return "";
         return to_string(root->val)+"("+serialize(root->left)+","+serialize(root->right)+")";
     }
 
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
-        if (data == "*") return NULL;
+        if (data.size() == 0) return NULL;
         int mid;
         for (mid = 0; mid < data.size(); mid++) {
             if (data[mid] == '(')break;//找到第一个括号
         }
-        //cout << "data:"<<data<< " ,mid:"<<mid<<endl;
+        cout << "data:"<<data<< " ,mid:"<<mid<<endl;
         string rs = data.substr(0, mid);//根节点的值
         TreeNode* root = new TreeNode(stoi(rs));
         int i,j = 0;
