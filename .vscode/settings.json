@@ -19,5 +19,9 @@
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
-    "clang.cxxflags": ["-std=c++11"]
+    "clang.cxxflags": [
+        "-std=c++11"
+    ],
+    
+    "editor.fontSize": 17
 }
