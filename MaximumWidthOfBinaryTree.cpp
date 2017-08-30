@@ -58,7 +58,7 @@ public:
     }
     void help(TreeNode* root,  int deep, int No, vector<int> &deeps, int &distance) {
         if(!root) return;
-        if(deep >= deeps.size()) deeps.push_back(No);//如果这个深度是第一个到，则增加到deeps里
+        if(deep == deeps.size()) deeps.push_back(No);//如果这个深度是第一个到，则增加到deeps里
         distance = max(No-deeps[deep]+1, distance);//当前深度中储存了这个深度第一个节点的序号
         help(root->left, deep+1, 2*No, deeps, distance);
         help(root->right, deep+1, 2*No+1, deeps, distance);
