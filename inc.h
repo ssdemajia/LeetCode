@@ -19,13 +19,18 @@ using vvs = vector<vector<string>>;//定义一些简易的别名
 using vvi = vector<vector<int>>;
 using vi = vector<int>;
 using vs = vector<string>;
-struct TreeNode {
+struct TreeNode {//树节点
    int val;
    TreeNode *left;
    TreeNode *right;
    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+struct ListNode {//链表节点
+   int val;
+   ListNode *next;
+   ListNode(int x) : val(x), next(NULL) {}
+};
 template <typename T>
 void displayVec(std::vector<T> v, string sep = " ")
 {
