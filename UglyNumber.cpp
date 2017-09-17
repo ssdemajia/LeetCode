@@ -13,7 +13,7 @@ public:
         while(num%5==0) {
             num/=5;
         }
-        if (num==1) return true;
+        if (num == 1) return true;
         return false;
     }
 };
