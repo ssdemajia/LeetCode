@@ -31,7 +31,28 @@ struct ListNode {//链表节点
    ListNode *next;
    ListNode(int x) : val(x), next(NULL) {}
 };
-template <typename T>
+
+ListNode* createList(vector<int> nums) {//通过vector建立list
+    ListNode* head = new ListNode(0);
+    ListNode* temp = head;
+    for (int i : nums) {
+        ListNode* node = new ListNode(i);
+        temp->next = node;
+        temp = temp->next;
+    }
+    return head->next;
+}
+void displayList(ListNode* l) {//打印list
+    while(l) {
+        cout << l->val << " ";
+        l=l->next;
+    }
+    cout << endl;
+}
+
+
+
+template <typename T>//打印vector
 void displayVec(std::vector<T> v, string sep = " ")
 {
     for (size_t i = 0; i < v.size(); i++) {
@@ -39,7 +60,7 @@ void displayVec(std::vector<T> v, string sep = " ")
     }
     cout << endl;
 }
-template <typename T>
+template <typename T>//打印二维vector
 void displayVec2d(std::vector<std::vector<T> > v,string sep = " ")
 {
     for (int i = 0; i < v.size(); i++)
@@ -52,7 +73,7 @@ void displayVec2d(std::vector<std::vector<T> > v,string sep = " ")
     }
 }
 template <typename K, typename V>
-void displayMap(std::unordered_map<K,V> m, string sep = " ")
+void displayMap(std::unordered_map<K,V> m, string sep = " ")//打印map
 {
     for (auto p:m) {
         cout << p.first<<"->"<<p.second<<" ";
@@ -60,7 +81,7 @@ void displayMap(std::unordered_map<K,V> m, string sep = " ")
     cout << "\n";
 }
 
-string serialize(TreeNode* root) {
+string serialize(TreeNode* root) {//序列化一个二叉树
     if (!root) return "";
     return to_string(root->val)+"("+serialize(root->left)+","+serialize(root->right)+")";
 }
