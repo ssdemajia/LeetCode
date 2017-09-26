@@ -36,3 +36,6 @@
 test.cpp
 .vscode
 a.out.dSYM
+.suo
+Browse.VC.db
+Browse.VC.opendb
