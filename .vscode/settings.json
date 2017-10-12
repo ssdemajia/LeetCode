@@ -17,7 +17,9 @@
         "functional": "cpp",
         "unordered_set": "cpp",
         "sstream": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "limits": "cpp",
+        "random": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
