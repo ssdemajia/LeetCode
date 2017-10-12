@@ -34,7 +34,7 @@
 
 #specify file
 test.cpp
-.vscode
+/.vscode
 a.out.dSYM
 .suo
 Browse.VC.db
