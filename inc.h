@@ -1,5 +1,6 @@
 #ifndef _INC_H
 #define _INC_H
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -128,4 +129,8 @@ void inorderDisplay(TreeNode* root) {
     cout << root->val<<" ";
     inorderDisplay(root->right);
 }
+
+
+#define TEST_ASSERT(CONDITION) do{if(!(CONDITION))throw 0;}while(0)
+#define TEST_PRINT(MESSAGE) cout<<(MESSAGE)<<endl;
 #endif
