@@ -10,6 +10,9 @@
  */
 class Solution {
 public:
+    /* 
+    思路：快速排序
+    */
     ListNode* sortList(ListNode* head) {
         partition(head, NULL);
         return head;
