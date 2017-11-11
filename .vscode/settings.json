@@ -38,7 +38,8 @@
         "new": "cpp",
         "cmath": "cpp",
         "type_traits": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "chrono": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
