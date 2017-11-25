@@ -130,7 +130,10 @@ void inorderDisplay(TreeNode* root) {
     inorderDisplay(root->right);
 }
 
-
+#define SS_ASSERT(CONDITION) do{if(!(CONDITION))\
+                {cout << __LINE__ <<":error!"<<endl;}\
+                else\
+                {cout<<"Yes!"<<endl;}}while(0)
 #define TEST_ASSERT(CONDITION) do{if(!(CONDITION))throw 0;}while(0)
 #define TEST_PRINT(MESSAGE) cout<<(MESSAGE)<<endl;
 #endif
