@@ -50,7 +50,9 @@
         "set": "cpp",
         "stack": "cpp",
         "string_view": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "fstream": "cpp",
+        "thread": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
