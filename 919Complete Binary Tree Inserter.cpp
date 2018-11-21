@@ -14,7 +14,7 @@ public:
       _build(root);
     }
     
-    void _build(TreeNode* root) {
+    void _build(TreeNode* root) { // bfs 
       queue<TreeNode*> q;
       q.push(root);
       while (!q.empty()) {
