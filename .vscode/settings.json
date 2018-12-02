@@ -52,7 +52,9 @@
         "string_view": "cpp",
         "__locale": "cpp",
         "fstream": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",

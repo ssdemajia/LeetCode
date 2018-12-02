@@ -14,7 +14,8 @@
 #include <bitset>
 #include <queue>
 #include <deque>
-//#include <stack>
+#include <list>
+#include <stack>
 using namespace std;
 using vvs = vector<vector<string>>;//定义一些简易的别名
 using vvi = vector<vector<int>>;
@@ -27,7 +28,21 @@ struct TreeNode {//树节点
    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-struct ListNode {//链表节点
+class Node {    // 多叉树节点
+public:
+    int val;
+    vector<Node*> children;
+
+    Node() {}
+
+    Node(int _val, vector<Node*> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+
+class ListNode {//链表节点
+public:
    int val;
    ListNode *next;
    ListNode(int x) : val(x), next(NULL) {}
@@ -43,6 +58,7 @@ ListNode* createList(vector<int> nums) {//通过vector建立list
     }
     return head->next;
 }
+
 void displayList(ListNode* l) {//打印list
     while(l) {
         cout << l->val << " ";
