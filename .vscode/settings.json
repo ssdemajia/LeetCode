@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "Vagrantfile": "ruby",
         "array": "cpp",
         "*.tcc": "cpp",
         "istream": "cpp",
@@ -54,7 +55,8 @@
         "fstream": "cpp",
         "thread": "cpp",
         "ratio": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "algorithm": "cpp"
     },
     "clang.diagnostic.delay": 200,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
